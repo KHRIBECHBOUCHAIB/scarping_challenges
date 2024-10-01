@@ -1,29 +1,21 @@
-# Web Scraping Project: Books, Quotes, and Advanced Quote Search
+# Web Scraping Project: Books, Quotes, and Random Quotes Collection
 
-This project consists of three web scraping modules that scrape data from different websites using similar dependencies:
+This project consists of four web scraping modules that scrape data from different websites using similar dependencies:
 
 1. **Books Scraper** - Scrapes book information from `books.toscrape.com`.
 2. **Quotes Scraper** - Scrapes quotes from `quotes.toscrape.com` after logging in.
-3. **Advanced Quote Search** - Scrapes quotes from `quotes.toscrape.com` using a more advanced search functionality, allowing searches by author and tags.
+3. **Einstein's Quotes Module** - Searches for quotes by Albert Einstein, filtering based on specific keywords.
+4. **Random Quotes Collector** - Scrapes random quotes from `quotes.toscrape.com` and saves them in a JSON file.
 
 All scripts make use of Python's `requests` library for making HTTP requests and `BeautifulSoup` for parsing HTML. The project is gathered into one repository because all modules share similar dependencies.
 
-## Table of Contents
-- [Project Overview](#project-overview)
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-  - [Books Scraper](#books-scraper)
-  - [Quotes Scraper](#quotes-scraper)
-  - [Advanced Quote Search](#advanced-quote-search)
-- [Dependencies](#dependencies)
 
 ## Project Overview
 
 This project was created to demonstrate web scraping skills using Python. It includes:
 - **Scraping books**: Collects book titles and prices from various categories on `books.toscrape.com`.
 - **Scraping quotes**: Connects to `quotes.toscrape.com` with login credentials to extract quotes, authors, and tags from multiple pages.
-- **Advanced quote search**: Searches quotes on `quotes.toscrape.com` by author and tag, using custom search capabilities.
+- **Random Quotes Collection**: Extracts random quotes from `quotes.toscrape.com` until a given number of unique quotes are collected.
 
 ### Websites Scraped:
 - [Books to Scrape](https://books.toscrape.com)
@@ -41,10 +33,14 @@ This project was created to demonstrate web scraping skills using Python. It inc
 - Scrapes quotes, authors, and tags.
 - Provides answers to simple questions based on the scraped quotes (e.g., first and fifth quote, most frequent tag).
 
-### Advanced Quote Search:
-- Searches quotes by a specific author with a specific tag.
-- Uses advanced form handling to interact with the search functionality on the website.
-- Extracts quotes, authors, and tags from search results.
+### Einstein's Quotes Module:
+- Searches for quotes by Albert Einstein and filters based on specific keywords.
+- Extracts quotes that contain the keyword and prints them.
+
+### Random Quotes Collector:
+- Scrapes random quotes from `quotes.toscrape.com`.
+- Collects up to 100 unique quotes, including their text, author, and tags.
+- Saves the collected quotes in a JSON file.
 
 ## Installation
 
@@ -52,6 +48,8 @@ Make sure you have Python 3.6 or newer installed on your machine. Clone the repo
 
 ```sh
 # Clone the repository
-git clone https://github.com/yourusername/scraping_challenges.git
+git clone https://github.com/yourusername/scraping-challenges.git
+
+
 # Install the required dependencies
 pip install -r requirements.txt
